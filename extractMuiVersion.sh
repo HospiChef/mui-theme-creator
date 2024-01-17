@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 PACKAGE_VERSION=$(cat package.json \
   | grep @mui/material \
   | head -1 \

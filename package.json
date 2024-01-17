@@ -3,9 +3,16 @@
   "private": true,
   "description": "A comprehensive tool to customize themes for Material-UI",
   "version": "5.0.0",
-  "keywords": ["MUI", "MUI v5", "Material-UI", "MUI Theme Creator"],
+  "keywords": [
+    "MUI",
+    "MUI v5",
+    "Material-UI",
+    "MUI Theme Creator"
+  ],
   "author": "Brian Reynolds <brireyn@gmail.com>",
-  "contributors": ["Zenoo (https://github.com/Zenoo)"],
+  "contributors": [
+    "Zenoo (https://github.com/Zenoo)"
+  ],
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@emotion/react": "^11.9.0",
@@ -18,7 +25,7 @@
     "@types/recharts": "^1.8.14",
     "deepmerge": "^4.2.2",
     "dot-prop-immutable": "^2.1.0",
-    "gatsby": "^4.11.2",
+    "gatsby": "^4.25.8",
     "gatsby-plugin-image": "^2.11.1",
     "gatsby-plugin-manifest": "4.11.1",
     "gatsby-plugin-material-ui": "^4.1.0",
@@ -42,7 +49,8 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.0.0",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "webpack": "^5.89.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
