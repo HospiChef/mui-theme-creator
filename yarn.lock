@@ -1329,6 +1329,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/dm-sans@^5.0.3":
+  version "5.0.18"
+  resolved "https://registry.npmjs.org/@fontsource/dm-sans/-/dm-sans-5.0.18.tgz"
+  integrity sha512-pcA2pVc+scDv55ttxIwhbwFBLhcQGdCXPhMqCmUcEVU61+TNCCjfHgoUU22DtZEMLT/Z8jxSZJHwaxthjCncjQ==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@^1.10.0":
   version "1.10.0"
   resolved "https://registry.npmjs.org/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-1.10.0.tgz"

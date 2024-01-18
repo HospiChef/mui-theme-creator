@@ -1,7 +1,7 @@
-import { createTheme, alpha } from '@mui/material/styles';
+import { createTheme, alpha, responsiveFontSizes, darken } from '@mui/material/styles';
 import * as colors from './colors';
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     text: {
       primary: colors.darkBlue[900],
@@ -12,12 +12,14 @@ const theme = createTheme({
       main: colors.teal[500],
       light: colors.teal[200],
       dark: colors.teal[800],
+      superlight: colors.teal[50],
     },
     secondary: {
       main: colors.darkBlue[900],
       light: colors.darkBlue[600],
       dark: colors.darkBlue[900],
       contrastText: colors.porcelain[50],
+      superlight: colors.darkBlue[200],
     },
     error: {
       main: colors.red[400],
@@ -55,14 +57,24 @@ const theme = createTheme({
       fontWeight: 500,
       fontSize: '18px',
     },
+    h5: {
+      fontWeight: 500,
+      fontSize: '16px',
+    },
+    h6: {
+      fontWeight: 500,
+      fontSize: '16px',
+    },
     subtitle1: {
       fontWeight: 500,
       fontSize: '18px',
     },
     subtitle2: {
+      fontSize: '14px',
+    },
+    body1: {
       fontSize: '16px',
     },
-    body1: {},
     body2: {
       fontSize: '14px',
     },
@@ -71,8 +83,12 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 16,
+    borderRadius: 10,
   },
+}
+);
+
+theme = createTheme(theme, {
   components: {
     MuiAlert: {
       styleOverrides: {
@@ -97,8 +113,90 @@ const theme = createTheme({
         },
       },
     },
-  },
-}
-);
+    MuiAppBar: {
+      defaultProps: {
+        color: "default"
+      }
+    },
+    MuiDrawer: {
+      defaultProps: {
+        PaperProps: {
+          sx: {
+            backgroundColor: colors.blueGrey[900],
+            color: darken(theme.palette.primary.contrastText, 0.1),
+            '& .MuiListItemIcon-root': {
+              color: 'inherit',
+            },
+            '& .MuiListItemText-primary': {
+              color: 'inherit',
+            },
+            '& .Mui-selected, & .Mui-selected:hover': {
+              backgroundColor: alpha('#000', 0.16),
+              color: theme.palette.primary.light,
+            },
+          }
+        }
+      }
+    },
+    MuiListSubheader: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+        }
+      },
+      defaultProps: {
+        color: "inherit",
+        sx: { typography: 'subtitle2', }
+      }
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          '& .MuiIcon-root': {
+            fontSize: theme.typography.body1.fontSize,
+          },
+          '& .MuiSvgIcon-root': {
+            fontSize: theme.typography.body1.fontSize,
+          },
+          minWidth: '32px'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+        },
+      },
+    },
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+          minWidth: '90px',
+        },
+      }
+    },
+    MuiSelect: {
+      defaultProps: {
+        autoWidth: true
+      }
+    },
+    MuiFormControl: {
+      defaultProps: {
+        size: 'small',
+      },
+    }
+  }
+})
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

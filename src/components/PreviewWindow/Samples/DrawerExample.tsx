@@ -4,7 +4,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard"
 import LayersIcon from "@mui/icons-material/Layers"
 import PeopleIcon from "@mui/icons-material/People"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
-import { Toolbar } from "@mui/material"
+import { ListItemButton, Toolbar } from "@mui/material"
 import Divider from "@mui/material/Divider"
 import Drawer from "@mui/material/Drawer"
 import List from "@mui/material/List"
@@ -13,6 +13,7 @@ import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import ListSubheader from "@mui/material/ListSubheader"
 import React from "react"
+import * as colors from 'src/assets/theme/colors'
 
 const drawerWidth = 240
 
@@ -50,7 +51,7 @@ const DrawerExample = ({ open, onClose }: Props) => {
         }),
       }}
     >
-      <Toolbar />
+      <Toolbar sx={{ bgcolor: colors.blueGrey[950] }} />
       <List>{mainListItems}</List>
       <Divider />
       <List>{secondaryListItems}</List>
@@ -62,12 +63,12 @@ export default DrawerExample
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItemButton selected>
       <ListItemIcon>
-        <DashboardIcon />
+        <DashboardIcon fontSize="small" />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
+      <ListItemText primary="Orders" primaryTypographyProps={{ style: { fontWeight: 100 } }} />
+    </ListItemButton>
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -97,7 +98,7 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+    <ListSubheader>Saved reports</ListSubheader>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />

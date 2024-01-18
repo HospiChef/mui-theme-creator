@@ -1,3 +1,5 @@
+import { Masonry } from "@mui/lab";
+import { Box } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import InputLabel from "@mui/material/InputLabel";
@@ -7,11 +9,11 @@ import React from "react";
 
 const styles = {
   formControl: {
-    m: 1,
-    minWidth: 120,
+    // m: 1,
+    // minWidth: 120,
   },
   selectEmpty: {
-    mt: 2,
+    // mt: 2,
   },
 }
 
@@ -23,8 +25,8 @@ export default function SelectExample() {
   }
 
   return (
-    <div>
-      <FormControl sx={styles.formControl}>
+    <Masonry>
+      <FormControl >
         <InputLabel id="demo-simple-select-label">Age</InputLabel>
         <Select
           label="Age"
@@ -38,7 +40,7 @@ export default function SelectExample() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
         <Select
           label="Age"
@@ -56,7 +58,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Some important helper text</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <Select
           value={age}
           onChange={handleChange}
@@ -73,7 +75,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Without label</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
           Age
         </InputLabel>
@@ -94,7 +96,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Label + placeholder</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl} disabled>
+      <FormControl disabled>
         <InputLabel id="demo-simple-select-disabled-label">Name</InputLabel>
         <Select
           label="Name"
@@ -112,7 +114,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Disabled</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl} error>
+      <FormControl error>
         <InputLabel id="demo-simple-select-error-label">Name</InputLabel>
         <Select
           label="Name"
@@ -131,7 +133,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Error</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <InputLabel id="demo-simple-select-readonly-label">Name</InputLabel>
         <Select
           label="Name"
@@ -150,7 +152,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Read only</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
         <Select
           label="Age  "
@@ -161,7 +163,7 @@ export default function SelectExample() {
           autoWidth
         >
           <MenuItem value="">
-            <em>None</em> 
+            <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
@@ -169,7 +171,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Auto width</FormHelperText>
       </FormControl>
-      <FormControl sx={styles.formControl}>
+      <FormControl >
         <Select
           value={age}
           onChange={handleChange}
@@ -186,7 +188,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Placeholder</FormHelperText>
       </FormControl>
-      <FormControl required sx={styles.formControl}>
+      <FormControl required >
         <InputLabel id="demo-simple-select-required-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-required-label"
@@ -204,7 +206,7 @@ export default function SelectExample() {
         </Select>
         <FormHelperText>Required</FormHelperText>
       </FormControl>
-      <FormControl variant="outlined" sx={styles.formControl}>
+      <FormControl variant="outlined" >
         <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-outlined-label"
@@ -221,7 +223,7 @@ export default function SelectExample() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant="filled" sx={styles.formControl}>
+      <FormControl variant="filled" >
         <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
@@ -237,6 +239,6 @@ export default function SelectExample() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-    </div>
+    </Masonry>
   )
 }

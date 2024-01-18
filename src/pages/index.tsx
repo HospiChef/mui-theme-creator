@@ -9,6 +9,8 @@ import MainWindow from "src/components/MainWindow";
 import SmallScreenWarning from "src/components/SmallScreenWarning";
 import ThemeConfigDrawer from "src/components/ThemeConfigDrawer";
 import Tutorial from "src/components/Tutorial";
+import "@fontsource/dm-sans"
+import "./index.css"
 
 const IndexPage = () => {
   return (
